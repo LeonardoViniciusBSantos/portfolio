@@ -8,16 +8,16 @@ import { sanityFetch } from '@/sanity';
 
 export default async function Header() {
     const headers = await sanityFetch<SanityDocument>({query: `*[_type == "header"][0]`});
-    const imageUrl = useSanityImage(headers.image);
+    const imageUrl = useSanityImage(headers.image).url();
 
     return(
         <header className={styles['header-wrapper']}>
             <div className={styles.header}>
                 <div className={styles.image}>
-                    <Image src={imageUrl} alt={headers.name} layout='fill'/>
+                    <Image src={imageUrl} alt={headers.name} fill/>
                 </div>
                 <div className={styles.content}>
-                    <span>Olá 👋 meu nome é {headers.name}. Sou um desenvolvedor Front-end que atua tanto para web quanto mobile.</span>
+                    <span>Olá 👋 pode me chamar de {headers.name}. Sou um ...</span>
                     <h1>{headers.ocupation}</h1>
                     <p> {headers.summary} </p>
                 </div>

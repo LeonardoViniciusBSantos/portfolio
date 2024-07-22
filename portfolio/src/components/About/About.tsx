@@ -12,12 +12,12 @@ export default async function About() {
     const images = abouts.image;
 
     const renderBiography = texts.map((texts: any) => ( <p key={texts._key}> {texts.paragraph} </p> ))
-    const imageUrl = useSanityImage(images);
+    const imageUrl = useSanityImage(images).url();
 
   return (
     <section className={styles.about}>
         <div className={styles.image}>
-            <Image src={imageUrl} alt='Foto pessoal de Leonardo Vinicius' layout='fill'/>
+            <Image src={imageUrl} alt='Foto pessoal de Leonardo Vinicius' fill/>
             <div className= {styles.box}>
                 <Box text = 'sobre' />
             </div>

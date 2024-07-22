@@ -3,7 +3,7 @@ import styles from './Box.module.scss'
 const Box = ({text}: any) => {
   return (
     <div className={styles.box}>
-        <span className='h5'>{text}</span>
+        <span className='h4'>{text}</span>
     </div>
   )
 }
