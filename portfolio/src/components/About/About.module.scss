@@ -7,12 +7,25 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    scroll-margin-top: 8rem;
 
+    @include device(mobile) {
+        margin-bottom: $marginBottomMobile;
+    }
+
+    @include device(tablet) {
+        flex-direction: column;
+    }
 
     .image {
-        width: 47rem;
+        width: 100%;
+        max-width: 47rem;
         height: 43rem;
         position: relative;
+
+        @include device(tablet) {
+            margin-bottom: 3rem;
+        }
 
         .box {
             position: absolute;
@@ -27,7 +40,6 @@
 
         a {
             margin-top: 1.5rem;
-            
         }
     }
 }

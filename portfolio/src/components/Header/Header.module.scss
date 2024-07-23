@@ -1,26 +1,43 @@
 @import '../../app/variables.scss';
 @import '../../app/mixins.scss';
-
 .header-wrapper {
     background-color: $background;
     margin-bottom: calc($marginBottom + 7rem);
-    
+
+    @include device(mobile) {
+        margin-bottom: calc($marginBottomMobile + 7rem);
+    }
+
     .header {
         @include max-width;
         min-height: 100vh;
         position: relative;
 
+        @include device(notebook) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 12rem;
+            padding-bottom: 4rem;
+        }
 
         .image {
-            width: 45rem;
+            width: 100%;
+            max-width: 45rem;
             height: 45rem;
             position: absolute;
             top: 50%;
             left: 2rem;
             transform: translateY(-50%);
 
-            &::before{
-                content: "";
+            @include device(notebook) {
+                position: static;
+                transform: translateY(0);
+                margin-bottom: 6rem;
+            }
+
+            &::before {
+                content: '';
                 display: block;
                 width: 60%;
                 height: 60%;
@@ -33,7 +50,7 @@
         }
 
         .content {
-            max-width: 70rem;
+            max-width: 76rem;
             display: flex;
             flex-direction: column;
             position: absolute;
@@ -41,6 +58,15 @@
             left: 50%;
             right: 2rem;
             transform: translateY(-50%);
+
+            @include device(notebook) {
+                position: static;
+                transform: translateY(0);
+                max-width: 60rem;
+                text-align: center;
+                align-items: center;
+                margin-bottom: 2rem;
+            }
 
             :is(span, p) {
                 color: $white;
@@ -53,6 +79,10 @@
             p {
                 align-self: flex-end;
                 max-width: 40rem;
+
+                @include device(notebook) {
+                    align-self: center;
+                }
             }
         }
 
@@ -69,10 +99,21 @@
             right: 2rem;
             z-index: 12;
 
+            @include device(notebook) {
+                flex-direction: row;
+                background-color: transparent;
+                position: static;
+                margin-bottom: 2rem;
+            }
+
             .icon {
                 width: 2.2rem;
                 height: 2.2rem;
                 color: $background;
+
+                @include device(notebook) {
+                    color: $lightPrimary;
+                }
 
                 &:hover {
                     cursor: pointer;
@@ -92,6 +133,9 @@
             left: 50%;
             animation: up-down 0.5s infinite alternate;
 
+            @include device(notebook) {
+                position: static;
+            }
 
             .icon {
                 width: 4rem;
@@ -108,12 +152,11 @@
                 from {
                     transform: translateY(0);
                 }
+
                 to {
                     transform: translateY(-1rem);
                 }
-                
             }
         }
     }
 }
-
