@@ -3,6 +3,7 @@ import Box from '../UI/Box';
 import styles from './Footer.module.scss';
 import { sanityFetch } from '@/sanity';
 import { FaEnvelope, FaPhone, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { RiWhatsappFill } from 'react-icons/ri';
 
 export async function Footer () {
 
@@ -22,7 +23,7 @@ export async function Footer () {
         <div className={styles.contact}>
           <ul>
             <li><FaEnvelope className={styles.icon} /><a href="#">leonardovinicius@gmail.com</a></li>
-            <li><FaPhone className={styles.icon} /><a href="https://wa.me/5563992874889">(63) 99287-4889</a></li>
+            <li><RiWhatsappFill className={styles.icon} /><a href="https://wa.me/5563992874889">(63) 99287-4889</a></li>
             <li><FaLinkedin className={styles.icon} /><a href="https://www.linkedin.com/in/leonardo-vinicius-batista-santos-396745209" target="_blank">LinkedIn</a></li>
             <li><FaGithub className={styles.icon} /><a href="https://github.com/LeonardoViniciusBSantos" target="_blank">GitHub</a></li>
           </ul>
