@@ -15,7 +15,7 @@ export default async function About() {
     const imageUrl = useSanityImage(images).url();
 
   return (
-    <section className={styles.about}>
+    <section className={styles.about} id='about'>
         <div className={styles.image}>
             <Image src={imageUrl} alt='Foto pessoal de Leonardo Vinicius' fill/>
             <div className= {styles.box}>

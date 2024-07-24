@@ -28,7 +28,7 @@ const skills = async () => {
 
 
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id='skills'>
         <div className={styles.skills} >
             <div className={styles.heading} >
                 <h2>{title}</h2>
@@ -41,11 +41,14 @@ const skills = async () => {
                 </ul>
             </div>
         </div>
-        <div className={styles.experiences} >
+        <div>
+          <div className= {styles.block}></div>
+          <div className={styles.experiences} >
             <h3>{experience_title}</h3>
             <ul>
                 {renderExperience}
             </ul>
+        </div>
         </div>
     </section>
   )
