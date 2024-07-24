@@ -24,10 +24,10 @@ const Navbar = () => {
             </a>
             <nav>
                 <ul className={styles.list}>
-                    <Navlink url ='#about' text = 'Sobre mim'  toggleMenu={() => setIsMenu(!isMenu)} />
-                    <Navlink url ='#skills' text = 'Experiências'  toggleMenu={() => setIsMenu(!isMenu)} />
-                    <Navlink url ='#projects' text = 'Projetos'  toggleMenu={() => setIsMenu(!isMenu)} />
-                    <Navlink url ='#footer' text = 'Contato'  toggleMenu={() => setIsMenu(!isMenu)} />
+                    <Navlink url ='#about' text = 'Sobre mim' />
+                    <Navlink url ='#skills' text = 'Experiências' />
+                    <Navlink url ='#projects' text = 'Projetos' />
+                    <Navlink url ='#footer' text = 'Contato' />
                 </ul>
             </nav>
             
@@ -38,10 +38,10 @@ const Navbar = () => {
                     <AiOutlineClose  {...commonAttributes}/>
                     <nav>
                         <ul className={styles['mobile-list']} >
-                            <Navlink url ='#about' text = 'Sobre mim'/>
-                            <Navlink url ='#skills' text = 'Experiências'/>
-                            <Navlink url ='#projects' text = 'Projetos'/>
-                            <Navlink url ='#footer' text = 'Contato'/>
+                            <Navlink url ='#about' text = 'Sobre mim' toggleMenu={() => setIsMenu(!isMenu)} />
+                            <Navlink url ='#skills' text = 'Experiências' toggleMenu={() => setIsMenu(!isMenu)} />
+                            <Navlink url ='#projects' text = 'Projetos' toggleMenu={() => setIsMenu(!isMenu)} />
+                            <Navlink url ='#footer' text = 'Contato' toggleMenu={() => setIsMenu(!isMenu)} />
                         </ul> 
                     </nav>
                 </div>
