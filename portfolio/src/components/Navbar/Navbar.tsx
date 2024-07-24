@@ -19,7 +19,7 @@ const Navbar = () => {
   return (
     <section className={styles['navbar-wrapper']} >
         <div className={styles.navbar} >
-            <a href="/" className= {styles.logo} >
+            <a href="./" className= {styles.logo} >
                 <Image src='/logo.png' alt='logo' width={42} height={27} />
             </a>
             <nav>
