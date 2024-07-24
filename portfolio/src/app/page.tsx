@@ -15,7 +15,8 @@ export default function Home() {
           {/* Favicon */}
           <link rel="icon" href="/logo.ico" />
       </head>
-    <Navbar/>
+    <body>
+      <Navbar/>
     <Header/>
     <main>
       <About/>
@@ -23,6 +24,9 @@ export default function Home() {
       <Projects/>
     </main>
     <Footer />
+      
+    </body>
+    
     </>
   );
 }
