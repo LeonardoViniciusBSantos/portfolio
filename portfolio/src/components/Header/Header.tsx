@@ -10,7 +10,7 @@ export default async function Header() {
     const headers = await sanityFetch<SanityDocument>({query: `*[_type == "header"][0]`});
     const social = await sanityFetch<SanityDocument>({query: `*[_type == "social"][0]`});
     const imageUrl = useSanityImage(headers.image).url();
-    const { linkedin, gitHub, whatsapp } = social;
+    const { linkedin, instagram, whatsapp } = social;
 
     return(
         <header className={styles['header-wrapper']}>
@@ -27,7 +27,7 @@ export default async function Header() {
                     <a href={linkedin}>
                         <RiLinkedinFill className={styles.icon}/>
                     </a>
-                    <a href={gitHub}>
+                    <a href={instagram}>
                         <RiGithubFill className={styles.icon}/>
                     </a>
                     <a href={whatsapp}>

@@ -4,7 +4,7 @@ export default {
   type: 'document',
   fields: [
     { name: 'linkedin', title: 'Linkedin', type: 'string' },
-    { name: 'instagram', title: 'Instagram', type: 'string' },
+    { name: 'github', title: 'GitHub', type: 'string' },
     { name: 'whatsapp', title: 'Whatsapp', type: 'string' },
   ],
 };
